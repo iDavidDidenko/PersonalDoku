@@ -1,0 +1,11 @@
+C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\bin\Debug\net8.0\Tables.deps.json
+C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\bin\Debug\net8.0\Tables.dll
+C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\bin\Debug\net8.0\Tables.pdb
+C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\obj\Debug\net8.0\Tables.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\obj\Debug\net8.0\Tables.AssemblyInfoInputs.cache
+C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\obj\Debug\net8.0\Tables.AssemblyInfo.cs
+C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\obj\Debug\net8.0\Tables.csproj.CoreCompileInputs.cache
+C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\obj\Debug\net8.0\Tables.dll
+C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\obj\Debug\net8.0\refint\Tables.dll
+C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\obj\Debug\net8.0\Tables.pdb
+C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\obj\Debug\net8.0\ref\Tables.dll
