@@ -9,3 +9,4 @@ C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\obj\Debug\net8.0\Tables
 C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\obj\Debug\net8.0\refint\Tables.dll
 C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\obj\Debug\net8.0\Tables.pdb
 C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\obj\Debug\net8.0\ref\Tables.dll
+C:\Users\diden\Desktop\Code\Projects\PersonalDoku\Tables\obj\Debug\net8.0\Tables.sourcelink.json

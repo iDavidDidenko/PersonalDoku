@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tables")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43bb67912430fb7707251a08a85b9fdab26eff5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tables")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tables")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

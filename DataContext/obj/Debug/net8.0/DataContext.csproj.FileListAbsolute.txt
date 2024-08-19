@@ -13,3 +13,4 @@ C:\Users\diden\Desktop\Code\Projects\PersonalDoku\DataContext\obj\Debug\net8.0\D
 C:\Users\diden\Desktop\Code\Projects\PersonalDoku\DataContext\obj\Debug\net8.0\refint\DataContext.dll
 C:\Users\diden\Desktop\Code\Projects\PersonalDoku\DataContext\obj\Debug\net8.0\DataContext.pdb
 C:\Users\diden\Desktop\Code\Projects\PersonalDoku\DataContext\obj\Debug\net8.0\ref\DataContext.dll
+C:\Users\diden\Desktop\Code\Projects\PersonalDoku\DataContext\obj\Debug\net8.0\DataContext.sourcelink.json
