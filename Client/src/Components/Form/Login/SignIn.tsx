@@ -1,8 +1,12 @@
 import { ChangeEvent, FocusEvent, useEffect, useState } from 'react';
-import { validateValues, ValidationErrors } from './Validation'; // Import the function and interface
+import { validateSignInFields, ValidationErrors } from './Validation'; // Import the function and interface
 import './Style.css'
 
-export default function SignIn() {
+interface SignInProps {
+    handleCurrentForm: (setFormDisplay: boolean) => void;
+}
+
+export default function SignIn({ handleCurrentForm }: SignInProps) {
 
     const initialLoginDetails = {
         email: '',
@@ -20,8 +24,8 @@ export default function SignIn() {
     // handleBlue for dynamic validation on Focuse field
     function handleBlur(event: FocusEvent<HTMLInputElement>) {
         const { name, value } = event.target;
-        const partialDetails = { ...details, [name]: value };
-        const validateErrors = validateValues(partialDetails);
+        const focusField = { ...details, [name]: value };
+        const validateErrors = validateSignInFields(focusField);
         setErrors(prevErrors => ({
             ...prevErrors,
             [name]: validateErrors[name]
@@ -36,12 +40,12 @@ export default function SignIn() {
 
     function handleSubmit(event: any) {
         event.preventDefault();
-        const validationErrors = validateValues(details);
+        const validationErrors = validateSignInFields(details);
         setErrors(validationErrors);
     }
 
     function handleSignUp() {
-
+        handleCurrentForm(false);
     }
 
     return (
