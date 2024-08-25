@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tables\Tables.csproj" />
-    <ProjectReference Include="..\DataContext\DataContext.csproj" />
+    <ProjectReference Include="..\Persistence\DataContext.csproj" />
   </ItemGroup>
 
 </Project>

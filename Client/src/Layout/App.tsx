@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
-import SignIn from '../Components/Form/Login/SignIn'
-import SignUp from '../Components/Form/Login/SignUp'
+import SignIn from '../Components/Form/SignIn'
+import SignUp from '../Components/Form/SignUp'
 
 
 function App() {

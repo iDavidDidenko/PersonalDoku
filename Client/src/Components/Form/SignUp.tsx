@@ -1,7 +1,14 @@
-import React, { ChangeEvent, FocusEvent, useEffect } from "react";
+import React, { ChangeEvent, FocusEvent } from "react";
 import { useState } from "react";
 import './Style.css'
 import { ValidationErrors, validateSignUpFields } from "./Validation";
+import  {CustomSelect, SelectOptions} from "../CustomHTML/CustomSelectElement";
+
+const AGE_OPTIONS : SelectOptions[] = [];
+
+for(let i = 10; i <= 90; i++){
+    AGE_OPTIONS.push();
+}
 
 interface SignUpProps {
     handleCurrentForm: (setFormDisplay: boolean) => void;
@@ -14,18 +21,12 @@ export default function SignUp({ handleCurrentForm }: SignUpProps) {
         email: '',
         age: '',
         password: '',
-        // profile image -> format PNJ, JPG, and other formats if needed.
+        profileImage: null,
     };
 
     const [registerInfo, setRegisterInfo] = useState(initialRegisterInfo);
     const [errors, setErrors] = useState<ValidationErrors>({});
-    const [age, setAge] = useState('');
-
-    useEffect(() => {
-        if (Object.keys(errors).length === 0) {
-            console.log(`submit pass: `);
-        }
-    }, [errors]);
+    const [imagePreviewUrl, setImagePreviewUrl] = useState<string | null>(null);
 
     function handleSubmit(event: any) {
         event.preventDefault();
@@ -33,7 +34,7 @@ export default function SignUp({ handleCurrentForm }: SignUpProps) {
         setErrors(validationErrors);
     }
 
-    function handleChange(event: ChangeEvent<HTMLInputElement>) {
+    function handleChange(event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
         const { name, value } = event.target;
         const updateChanges = { ...registerInfo, [name]: value };
         setRegisterInfo(updateChanges);
@@ -49,24 +50,12 @@ export default function SignUp({ handleCurrentForm }: SignUpProps) {
         }));
 
     }
-
-    const handleAgeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        const selectedAge = event.target.value;
-        setAge(selectedAge);
-        setRegisterInfo(prevInfo => ({
-            ...prevInfo,
-            age: selectedAge
-        }));
-    };
-
-    const ageOptions = [];
-    for (let i = 10; i <= 99; i++) {
-        ageOptions.push(<option key={i} value={i}>{i}</option>);
-    }
+    
+    
 
     return (
         <div className="container">
-            <img id="leftArrow" src="./left-arrow.png" onClick={()=>{handleCurrentForm(true)}}/>
+            <img id="leftArrow" src="./left-arrow.png" onClick={() => { handleCurrentForm(true) }} />
             <form className="form-container" id="signUp" onSubmit={handleSubmit}>
                 <label>First Name:</label>
                 <input type="text"
@@ -90,10 +79,10 @@ export default function SignUp({ handleCurrentForm }: SignUpProps) {
                     onBlur={handleBlur} />
                 <div className='error-container'>{errors.email ? <>{errors.email}</> : null}</div>
                 <label>Age:</label>
-                <select id="age" value={age} onChange={handleAgeChange}>
-                    <option value="" disabled>Select your age</option>
-                    {ageOptions}
-                </select>
+                <CustomSelect props={registerInfo.age} opsList={AGE_OPTIONS}></CustomSelect>
+                {/* <select id="age" value={registerInfo.age} onChange={handleChange} >
+                    <option value="" disabled >Select your age</option>
+                </select> */}
                 <div className='error-container'>{errors.age ? <>{errors.age}</> : null}</div>
                 <label>Password:</label>
                 <input type="password"
@@ -102,10 +91,12 @@ export default function SignUp({ handleCurrentForm }: SignUpProps) {
                     onChange={handleChange}
                     onBlur={handleBlur} />
                 <div className='error-container'>{errors.password ? <>{errors.password}</> : null}</div>
+                <label>Upload Profile Image (PNG, JPG):</label>
+                {/* <input type="file" accept="image/png, image/jpeg" onChange={handleFileChange} />
+                {imagePreviewUrl && <p>Success</p>  /*<img src={imagePreviewUrl} alt="Profile Preview" className="image-preview" />} */} */
                 <div className="button-container">
                     <button type="submit">Register!</button>
                 </div>
-
             </form>
         </div>
     )
