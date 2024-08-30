@@ -35,3 +35,5 @@ C:\Users\diden\Desktop\Code\Projects\PersonalDoku\API\obj\Debug\net8.0\API.pdb
 C:\Users\diden\Desktop\Code\Projects\PersonalDoku\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\diden\Desktop\Code\Projects\PersonalDoku\API\obj\Debug\net8.0\ref\API.dll
 C:\Users\diden\Desktop\Code\Projects\PersonalDoku\API\obj\Debug\net8.0\API.sourcelink.json
+C:\Users\diden\Desktop\Code\Projects\PersonalDoku\API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\diden\Desktop\Code\Projects\PersonalDoku\API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll

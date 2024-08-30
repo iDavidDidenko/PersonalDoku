@@ -1,10 +1,21 @@
-import SignIn from '../Components/Form/signin/SignIn'
+
+import { useState } from 'react'
+import SignIn from '../Components/Form/SignIn'
+import SignUp from '../Components/Form/SignUp'
+
 
 function App() {
 
+  const [isSignIn, setCurrentForm] = useState(true);
+  
+  function handleCurrentForm(setFormDisplay : boolean) : void{
+    setCurrentForm(setFormDisplay);
+  }
+
   return (
     <>
-      <SignIn />
+      {isSignIn ? <SignIn handleCurrentForm={handleCurrentForm}/> : 
+                  <SignUp handleCurrentForm={handleCurrentForm}/>}
     </>
   )
 }
